@@ -47,9 +47,6 @@ function correctDecodeRPSEncryption(encrypt){
     return sum;
 }
 
-console.log(decodeRPSEncryption(mydata.stratGuide));
-console.log(correctDecodeRPSEncryption(mydata.stratGuide))
-
 module.exports = { 
     decodeRPSEncryption,
     correctDecodeRPSEncryption

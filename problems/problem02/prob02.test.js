@@ -1,4 +1,4 @@
-// Rock Paper Scissors Advent of code 2022 day 2
+//Advent of code 2022 day 3
 const  prob2Funcs = require('./index.js');
 const myData = require("./puzzleinput02.js");
 

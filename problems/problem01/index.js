@@ -29,7 +29,7 @@ function calorieCount(){
             fattestElf.calCount = currentCal;
         }
     }
-    console.log("The elf with the greatest total caleiers is elf number " + fattestElf.num + " with a total of " + fattestElf.calCount + " caleries." );
+    // console.log("The elf with the greatest total caleiers is elf number " + fattestElf.num + " with a total of " + fattestElf.calCount + " caleries." );
     return fattestElf;
 }
 
