@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"jest"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "repository": "git@github.com:JasonStieber/adventofcode2022JS-C-.git"
 }
