@@ -12,12 +12,38 @@ function nieveConditoinal(shortStr){
 }
 
 function findStartOfPacketLoc(packet) {
-    for(let i = 4, i < packet.length; i++){
+    for(let i = 4; i < packet.length; i++){
         if(nieveConditoinal(packet.slice(i-4,i))){
             return i
         }
     }
-    return loc;
+    throw new Error("no 4 character packet was found, we should find one");
+    return -1;
 }
 
-module.exports = {findStartOfPacketLoc};
+function messageChecker(packet){
+    let unique = {};
+    for(let j =0; j < packet.length; j++){
+        let character = packet[j];
+        if(unique[character]){
+            return false;
+        }
+        unique[character] = true;
+    }
+    return true;
+}
+
+function findStartOfMessage(packet) {
+    for(let i = 14; i < packet.length; i++){
+        if(messageChecker(packet.slice(i-14,i))){
+            return i;
+        }
+    }
+    throw new Error("no 4 character packet was found, we should find one");
+    return -1;
+}
+
+console.log(findStartOfPacketLoc(data.puzzleString));
+console.log(findStartOfMessage(data.puzzleString));
+
+module.exports = {findStartOfPacketLoc, findStartOfMessage};
