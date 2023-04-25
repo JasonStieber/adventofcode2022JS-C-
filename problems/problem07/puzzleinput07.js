@@ -1068,4 +1068,4 @@ $ cd sdhqp
 $ ls
 95362 wsbpzmbq.hws`;
 
-modles.export = {testInput, puzzleInput};
+module.exports = {testInput, puzzleInput};

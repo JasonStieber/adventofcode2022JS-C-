@@ -3,6 +3,11 @@ const prob6Funcs = require('./index.js');
 const myData = require("./puzzleinput06.js");
 
 describe('Day 6 Search for loction of first 4 non repeating characters', () => {
+  
+  test("Test optimized solution with new function should return 7", () => {
+    expect(prob6Funcs.locateUniqueSubset(myData.testString1,4)).toBe(7);
+  });
+
   test('testing first test string should return 7', () => {
     expect(prob6Funcs.findStartOfPacketLoc(myData.testString1)).toBe(7);
   });
@@ -38,6 +43,6 @@ describe('Day 6 Search for loction of first 4 non repeating characters', () => {
   });
 
   test('testing fifth test string should return 26', () => {
-    expect(prob6Funcs.findStartOfMessage(myData.testString5)).toBe(26);
+    expect(prob6Funcs.locateUniqueSubset(myData.testString5, 14)).toBe(26);
   });
 });
